@@ -1,6 +1,9 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <router-view/>
+  <div class="app">
+    <div class="app-container">
+      <router-view/>
+    </div>
+  </div>
 </template>
 
 <script>
