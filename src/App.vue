@@ -1,6 +1,11 @@
 <template>
   <div class="app">
     <div class="app-container">
+      <div class="nav-bar">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/login">Sign in</router-link> |
+        <router-link to="/register">Sign up</router-link>
+      </div>
       <router-view/>
     </div>
   </div>
@@ -20,6 +25,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+}
+.nav-bar {
+  margin-bottom: 20px;
 }
 </style>
