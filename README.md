@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Firebase link 
+https://www.bezkoder.com/vue-firebase-realtime-database/
