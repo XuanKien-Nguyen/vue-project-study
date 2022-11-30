@@ -2,7 +2,7 @@
   <div class="app">
     <div class="app-container">
       <div class="nav-bar">
-        <router-link to="/">Home</router-link> |
+        <router-link to="/home">Home</router-link> |
         <router-link to="/login">Sign in</router-link> |
         <router-link to="/register">Sign up</router-link>
       </div>
