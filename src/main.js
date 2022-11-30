@@ -1,11 +1,12 @@
 import { createApp } from 'vue';
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore";
+import { getDatabase } from "firebase/database";
+
 import App from './App.vue';
-import HomePage from './components/Home.vue';
-import LoginPage from './components/Login.vue';
-import RegisterPage from './components/Register.vue';
-import NotFoundPage from './components/NotFound.vue';
-import firebase from 'firebase';
+import router from './routes.js';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCDjqe1bCPGRAwKI5Kc42bN5l0fsOUbxPU",
@@ -18,19 +19,11 @@ const firebaseConfig = {
   measurementId: "G-CWYSG23GJT"
 };
 
-firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const firebaseAuth = getAuth(app);
+export const fbDatabase = getDatabase(app);
+export const fStore = getFirestore(app);
+export const fStorage = getStorage(app);
 
-
-const routes = [
-    { path: '/home', name: 'Home', component: HomePage },
-    { path: '/login', name: 'Login', component: LoginPage },
-    { path: '/register', name: 'Register', component: RegisterPage },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundPage },
-  ]
-
-const router = createRouter({
-    history: createWebHashHistory(),
-    routes,
-  })
-
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).mount('#app');
