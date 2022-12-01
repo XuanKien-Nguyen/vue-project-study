@@ -26,3 +26,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Firebase link 
 https://www.bezkoder.com/vue-firebase-realtime-database/
+https://www.koderhq.com/tutorial/vue/firestore-database/
